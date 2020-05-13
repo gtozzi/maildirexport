@@ -109,7 +109,7 @@ class MaildirExporter:
 						except LookupError:
 							subject = subject[0].decode(errors='replace')
 						else:
-							subject = subject[0].decode(subject[1])
+							subject = subject[0].decode(subject[1], errors='replace')
 				else:
 					raise NotImplementedError(type(subject[0]))
 			else:
